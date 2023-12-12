@@ -7,6 +7,8 @@
 package com.via.cms.model;
 
 import java.io.Serializable;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -24,8 +26,8 @@ import lombok.Data;
  */
 @Data
 @Entity
-// @DynamicUpdate
-// @DynamicInsert
+@DynamicUpdate
+@DynamicInsert
 @Table(name = "user")
 public class User implements Serializable {
 
